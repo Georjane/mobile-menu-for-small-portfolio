@@ -7,3 +7,7 @@ function myFunction() {
     x.style.display = "block";
   }
 }
+
+function myNextFunction(x) {
+  x.classList.toggle("change");
+}
