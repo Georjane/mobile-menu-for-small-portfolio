@@ -6,14 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="icon" href="./favicon.ico" />
-    <title>Aziz Mejri - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
+    <title>Jane - Portfolio</title>
   </head>
   <body>
     <header>
-      <h1 id="logo">Aziz Mejri</h1>
-      <button type="button" class="menu-bars">
-        <i class="fas fa-bars"></i>
-      </button>
+      <div class="topnav">
+        <a href="#home" class="active"><h1>Jane</h1></a>
+        <div id="myLinks" >
+          <a href="#intro">Hello</a>
+          <a href="#projects">Portfolio</a>
+          <a href="#contact">Contact</a>
+          <a href="#about-me">About</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <div class="container" onclick="myNextFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </a>
+
+      </div>
       <nav id="desktop-nav">
         <ul>
           <li><a class="nav-link" href="#projects">Portoflio</a></li>
@@ -43,7 +58,7 @@
         <h2 class="intro-greet">
           Hey There.
           <br />
-          I'm Aziz
+          I'm Jane
         </h2>
         <h2 class="intro-me">I’am a Software Developer</h2>
         <p class="intro-text">
@@ -442,5 +457,20 @@
       src="https://kit.fontawesome.com/e966a3bd22.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      myFunction = () => {
+        const x = document.getElementById('myLinks');
+        if (x.style.display === 'block') {
+          x.style.display = 'none';
+        } else {
+          x.style.display = 'block';
+        }
+      };
+
+      myNextFunction = (x) => {
+        x.classList.toggle('change');
+      };
+
+    </script>
   </body>
 </html>
